@@ -186,11 +186,11 @@ ul {
   font-size: 1.4rem;
   color: var(--whiteTextColor);
 }
-.main-nav__content li:nth-of-type(2) {
+.main-nav__content li:nth-of-type(3) {
   color: var(--hoverColor);
   position: relative;
 }
-.main-nav__content li:nth-of-type(2)::after {
+.main-nav__content li:nth-of-type(3)::after {
   content: "";
   position: absolute;
   background-color: var(--yellowEffect);
@@ -265,7 +265,7 @@ ul {
   .main-nav__search {
     display: none;
   }
-  .main-nav__content li:nth-of-type(2):hover {
+  .main-nav__content li:nth-of-type(3):hover {
     color: var(--secondHoverColor);
   }
   .main-nav__join button {
