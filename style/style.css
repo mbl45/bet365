@@ -291,7 +291,7 @@ ul {
   .main-nav__login button {
     padding: 0;
   }
-  .main-nav__content li:nth-of-type(2)::after {
+  .main-nav__content li:nth-of-type(3)::after {
     bottom: -2.8rem;
   }
 }
