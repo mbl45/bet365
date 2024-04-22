@@ -12,6 +12,7 @@ contract BettingContract {
         uint256 gameID;
         uint256 betOption;
         BetState state;
+        uint256 price;
     }
 
     struct Game {
@@ -33,6 +34,7 @@ contract BettingContract {
     event GameClosed(uint256 gameID);
     event BetStateChanged(uint256 gameID, uint256 betOption, BetState newState);
     event WinningsDistributed(uint256 gameID, uint256[] winningBets, uint256 totalWinnings);
+    event BetSold(uint256 gameID, uint256 betID, address newOwner, uint256 price);
     
     constructor() {
         numGames = 0;
@@ -53,6 +55,20 @@ contract BettingContract {
         emit NewGame(_description);
     }
     
+    function closeGame(uint256 _gameId) public onlyOwner {
+        require(_gameId < numGames, "Invalid game ID");
+        Game storage game = games[_gameId];
+        require(game.isOpen, "Game is already closed");
+        game.isOpen = false;
+        uint256 totalFunds = 0;
+        for (uint256 i = 0; i < game.bets.length; i++) {
+            Bet storage bet = bets[_gameId][i];
+            totalFunds += bet.amount;
+        }
+        payable(owner()).transfer(totalFunds);
+        emit GameClosed(_gameId);
+    }
+
     function placeBet(uint256 _gameId, uint256 _betOption) public payable {
         require(_gameId < numGames, "Invalid game ID");
         Game storage game = games[_gameId];
@@ -68,18 +84,26 @@ contract BettingContract {
         emit NewBet(_gameId, _betOption);
     }
     
-    function closeGame(uint256 _gameId) public onlyOwner {
-        require(_gameId < numGames, "Invalid game ID");
-        Game storage game = games[_gameId];
-        require(game.isOpen, "Game is already closed");
-        game.isOpen = false;
-        uint256 totalFunds = 0;
-        for (uint256 i = 0; i < game.bets.length; i++) {
-            Bet storage bet = bets[_gameId][i];
-            totalFunds += bet.amount;
-        }
-        payable(owner()).transfer(totalFunds);
-        emit GameClosed(_gameId);
+    function sellBet(uint256 _gameId, uint256 _betId, uint256 _price) public {
+        Bet storage bet = bets[_gameId][_betId];
+        require(msg.sender == bet.user, "Only the owner of the bet can sell it");
+        require(bet.state == BetState.PENDING, "The bet must be pending to be sold");
+        bet.price = _price;
+    }
+
+    function buyBet(uint256 _gameId, uint256 _betId) public payable {
+        Bet storage bet = bets[_gameId][_betId];
+        require(bet.price > 0, "The bet is not for sale");
+        require(msg.value >= bet.price, "Sent value must be at least the price of the bet");
+
+        // Transfer the price to the seller
+        payable(bet.user).transfer(bet.price);
+
+        // Update the bet
+        bet.user = payable(msg.sender);
+        bet.price = 0;
+
+        emit BetSold(_gameId, _betId, msg.sender, bet.price);
     }
     
     function removeBet(uint256 _gameId) public {
