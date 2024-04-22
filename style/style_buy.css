@@ -1,0 +1,94 @@
+@import url('style.css');
+
+/* Variables */
+:root {
+  --backgroundColor: #505050;
+  --secondBackground: #333;
+  --thirdBackground: #404040;
+  --fourthBackground: #585858;
+  --fifthBackground: #383838;
+  --sixthBackground: #444;
+  --greenBackground: #126e51;
+  --mainTextColor: #9c9c9c;
+  --secondryTextColor: #ddd;
+  --thirdTextColor: #a7a7a7;
+  --fourthTextColor: #b5b5b5;
+  --fifthTextColor: #f0f0f0;
+  --numColor: #ccc;
+  --tableHeadColor: #cecece;
+  --hoverColor: #fff;
+  --secondHoverColor: #26ffbe;
+  --thirdHoverColor: #636363;
+  --mainBorderColor: #5d5d5d;
+  --secondryBorderColor: #545454;
+  --whiteTextColor: #e4e4e4;
+  --yellowEffect: #ffdf1b;
+  --dataRedColor: rgb(234, 38, 54);
+  --dataWhiteColor: rgb(240, 240, 240);
+  --colorTransition: color 0.2s;
+  --opacityTransition: opacity 0.2s;
+  --side-barBorder: 1px solid #474747;
+}
+/* Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+::-webkit-scrollbar {
+  width: 15px;
+  border-left: 1px solid var(--secondBackground);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--fourthBackground);
+  border-left: 1px solid var(--secondBackground);
+}
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background-color: #87878780;
+  border: 4px solid transparent;
+  border-radius: 10px;
+  background-clip: content-box;
+}
+
+body {
+  background-color: var(--backgroundColor);
+  scrollbar-width: auto;
+  scrollbar-color: #87878780 var(--fourthBackground);
+}
+html,
+ul {
+  list-style: none;
+}
+.main-nav__content li:nth-of-type(4) {
+  color: var(--hoverColor);
+  position: relative;
+}
+.main-nav__content li:nth-of-type(4)::after {
+  content: "";
+  position: absolute;
+  background-color: var(--yellowEffect);
+  width: 100%;
+  height: 0.2rem;
+  bottom: -2.5rem;
+  left: 0;
+}
+@media (max-width: 964px) {
+  .main-nav__content li:nth-of-type(4):hover {
+    color: var(--secondHoverColor);
+  }
+}
+@media (max-width: 782px) {
+  .main-nav__content li:nth-of-type(4)::after {
+    bottom: -2.8rem;
+  }
+}
