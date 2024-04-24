@@ -13,6 +13,8 @@ contract BettingContract {
         uint256 betOption;
         BetState state;
         uint256 price;
+        uint256 totalShares;
+        mapping(address => uint256) shares;
     }
 
     struct Game {
@@ -84,26 +86,26 @@ contract BettingContract {
         emit NewBet(_gameId, _betOption);
     }
     
-    function sellBet(uint256 _gameId, uint256 _betId, uint256 _price) public {
+    function sellBet(uint256 _gameId, uint256 _betId, uint256 _price, uint256 _shares) public {
         Bet storage bet = bets[_gameId][_betId];
-        require(msg.sender == bet.user, "Only the owner of the bet can sell it");
+        require(bet.shares[msg.sender] >= _shares, "You don't own enough shares of this bet to sell");
         require(bet.state == BetState.PENDING, "The bet must be pending to be sold");
         bet.price = _price;
+        bet.totalShares -= _shares;
+        bet.shares[msg.sender] -= _shares;
     }
 
-    function buyBet(uint256 _gameId, uint256 _betId) public payable {
+    function buyBet(uint256 _gameId, uint256 _betId, uint256 _shares) public payable {
         Bet storage bet = bets[_gameId][_betId];
         require(bet.price > 0, "The bet is not for sale");
-        require(msg.value >= bet.price, "Sent value must be at least the price of the bet");
+        require(msg.value >= bet.price * _shares, "Sent value must be at least the price of the bet");
 
         // Transfer the price to the seller
-        payable(bet.user).transfer(bet.price);
+        payable(bet.user).transfer(bet.price * _shares);
 
         // Update the bet
-        bet.user = payable(msg.sender);
-        bet.price = 0;
-
-        emit BetSold(_gameId, _betId, msg.sender, bet.price);
+        bet.shares[msg.sender] += _shares;
+        bet.totalShares += _shares;
     }
     
     function removeBet(uint256 _gameId) public {
