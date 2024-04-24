@@ -29,6 +29,7 @@
     />
     <!-- Main style -->
     <link rel="stylesheet" href="style/style_buy.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <!-- header structure -->
@@ -249,15 +250,15 @@
             />
           </div>
           <div class="main-content__right-head flex-between-center">
-            <p>Fulltime Result</p>
+            <p>Time To Expiry Desc</p>
             <i class="fa-solid fa-chevron-down"></i>
             <input type="checkbox" />
             <div class="fulltime-menu">
               <ul>
-                <li>Fulltime Result</li>
-                <li>Match Goals</li>
-                <li>Asian Handicap In-Play</li>
-                <li>Goal Line In-Play</li>
+                <li>Time To Expiry Desc</li>
+                <li>EV Asc</li>
+                <li>Ticket Payout Asc</li>
+                <li>Price Desc</li>
               </ul>
             </div>
           </div>
@@ -281,10 +282,10 @@
               <p class="main-content__championship__head__text">
                 Netherlands - Premier League
               </p>
-              <div class="main-content__championship__head__num1">1</div>
-              <div class="main-content__championship__head__num2">X</div>
-              <div class="main-content__championship__head__num3">2</div>
-              <div class="main-content__championship__head__symbol"></div>
+              <div class="main-content__championship__head__num1">EV</div>
+              <div class="main-content__championship__head__num2">Ticket Payout</div>
+              <div class="main-content__championship__head__num3">Current Payout</div>
+              <div class="main-content__championship__head__num3">Price</div>
             </div>
             <div class="main-content__championship__body grid container">
               <div class="main-content__fav">
@@ -303,17 +304,13 @@
               <div
                 class="main-content__championship__body__text flex-between-center"
               >
-                <div class="main-content__championship__body__data-item">
-                  <div class="main-content__championship__body__time">
-                    49:34
+                <div>
+                  <div class="main-content__championship__body__team">
+                    <p>Sparta Rotterdam</p>
                   </div>
-                  <div class="main-content__championship__body__data">
-                    73 <i class="fa-solid fa-chevron-right"></i>
+                  <div class="main-content__championship__body__bet">
+                    <p>To Win 2024 Championship</p>
                   </div>
-                </div>
-                <div class="main-content__championship__body__name">
-                  <p>Sparta Rotterdam</p>
-                  <p>FC Utrecht</p>
                 </div>
                 <div class="main-content__fav">
                   <img
@@ -328,28 +325,14 @@
                     class="main-content__fav__active"
                   />
                 </div>
-                <div class="main-content__championship__body__insights">
-                  <span>0</span>
-                  <br />
-                  <span>0</span>
+                <div class="main-content__championship__body__name">
+                  <p>19 mins left</p>
                 </div>
               </div>
-              <div class="main-content__championship__body__num">7.00</div>
-              <div class="main-content__championship__body__num">2.40</div>
-              <div class="main-content__championship__body__num">1.95</div>
-              <div class="main-content__fav fav-symbol">
-                <img
-                  src="assets/content-icons/video-icon.png"
-                  alt="Play icon"
-                  loading="lazy"
-                />
-                <img
-                  src="assets/content-icons/video-icon-active.png"
-                  alt="Active play icon"
-                  loading="lazy"
-                  class="main-content__fav__active"
-                />
-              </div>
+              <div class="main-content__championship__body__num">3.5x</div>
+              <div class="main-content__championship__body__num">$7000</div>
+              <div class="main-content__championship__body__num">$2000</div>
+              <div class="main-content__championship__body__num">$100</div>
             </div>
           </article>
           <article class="main-content__championship">
@@ -370,10 +353,10 @@
               <p class="main-content__championship__head__text">
                 Argentina Nacional B
               </p>
-              <div class="main-content__championship__head__num1">1</div>
-              <div class="main-content__championship__head__num2">X</div>
-              <div class="main-content__championship__head__num3">2</div>
-              <div class="main-content__championship__head__symbol"></div>
+              <div class="main-content__championship__head__num1">EV</div>
+              <div class="main-content__championship__head__num2">Ticket Payout</div>
+              <div class="main-content__championship__head__num3">Current Payout</div>
+              <div class="main-content__championship__head__num3">Price</div>
             </div>
             <div class="main-content__championship__body grid container">
               <div class="main-content__fav">
@@ -392,52 +375,35 @@
               <div
                 class="main-content__championship__body__text flex-between-center"
               >
-                <div class="main-content__championship__body__data-item">
-                  <div class="main-content__championship__body__time">
-                    31:22
-                  </div>
-                  <div class="main-content__championship__body__data">
-                    57 <i class="fa-solid fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="main-content__championship__body__name">
-                  <p>Temperley</p>
+              <div>
+                <div class="main-content__championship__body__team">
                   <p>Nueva Chicago</p>
                 </div>
-                <div class="main-content__fav">
-                  <img
-                    src="assets/content-icons/data-statistics.png"
-                    alt="Statistics icon"
-                    loading="lazy"
-                  />
-                  <img
-                    src="assets/content-icons/data-statistics-active.png"
-                    alt="Active statistics icon"
-                    loading="lazy"
-                    class="main-content__fav__active"
-                  />
-                </div>
-                <div class="main-content__championship__body__insights">
-                  <span>1</span>
-                  <br />
-                  <span>0</span>
+                <div class="main-content__championship__body__bet">
+                  <p>Moneyline</p>
                 </div>
               </div>
-              <div class="main-content__championship__body__num">1.44</div>
-              <div class="main-content__championship__body__num">3.75</div>
-              <div class="main-content__championship__body__num">9.00</div>
-              <div class="main-content__fav fav-symbol">
+              <div class="main-content__fav">
                 <img
-                  src="assets/content-icons/soccer-feild-icon.png"
-                  alt="Play icon"
+                  src="assets/content-icons/data-statistics.png"
+                  alt="Statistics icon"
                   loading="lazy"
                 />
                 <img
-                  src="assets/content-icons/soccer-feild-icon-active.png"
-                  alt="Active play icon"
+                  src="assets/content-icons/data-statistics-active.png"
+                  alt="Active statistics icon"
                   loading="lazy"
                   class="main-content__fav__active"
                 />
+              </div>
+              <div class="main-content__championship__body__name">
+                <p>37 mins left</p>
+              </div>
+              </div>
+                <div class="main-content__championship__body__num">1.5x</div>
+                <div class="main-content__championship__body__num">$300</div>
+                <div class="main-content__championship__body__num">$200</div>
+                <div class="main-content__championship__body__num">$200</div>
               </div>
             </div>
           </article>
@@ -459,10 +425,10 @@
               <p class="main-content__championship__head__text">
                 Mexico - Liga TDP
               </p>
-              <div class="main-content__championship__head__num1">1</div>
-              <div class="main-content__championship__head__num2">X</div>
-              <div class="main-content__championship__head__num3">2</div>
-              <div class="main-content__championship__head__symbol"></div>
+              <div class="main-content__championship__head__num1">EV</div>
+              <div class="main-content__championship__head__num2">Ticket Payout</div>
+              <div class="main-content__championship__head__num3">Current Payout</div>
+              <div class="main-content__championship__head__num3">Price</div>
             </div>
             <div class="main-content__championship__body grid container">
               <div class="main-content__fav">
@@ -481,52 +447,36 @@
               <div
                 class="main-content__championship__body__text flex-between-center"
               >
-                <div class="main-content__championship__body__data-item">
-                  <div class="main-content__championship__body__time">
-                    00:00
-                  </div>
-                  <div class="main-content__championship__body__data">
-                    87 <i class="fa-solid fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="main-content__championship__body__name">
-                  <p>CEFOR Chiapas</p>
+              <div>
+                <div class="main-content__championship__body__team">
                   <p>Antequera FC</p>
                 </div>
-                <div class="main-content__fav">
-                  <img
-                    src="assets/content-icons/data-statistics.png"
-                    alt="Statistics icon"
-                    loading="lazy"
-                  />
-                  <img
-                    src="assets/content-icons/data-statistics-active.png"
-                    alt="Active statistics icon"
-                    loading="lazy"
-                    class="main-content__fav__active"
-                  />
-                </div>
-                <div class="main-content__championship__body__insights">
-                  <span>0</span>
-                  <br />
-                  <span>0</span>
+                <div class="main-content__championship__body__bet">
+                  <p>Moneyline</p>
                 </div>
               </div>
-              <div class="main-content__championship__body__num">1.60</div>
-              <div class="main-content__championship__body__num">3.75</div>
-              <div class="main-content__championship__body__num">4.50</div>
-              <div class="main-content__fav fav-symbol">
+              <div class="main-content__fav">
                 <img
-                  src="assets/content-icons/soccer-feild-icon.png"
-                  alt="Play icon"
+                  src="assets/content-icons/data-statistics.png"
+                  alt="Statistics icon"
                   loading="lazy"
                 />
                 <img
-                  src="assets/content-icons/soccer-feild-icon-active.png"
-                  alt="Active play icon"
+                  src="assets/content-icons/data-statistics-active.png"
+                  alt="Active statistics icon"
                   loading="lazy"
                   class="main-content__fav__active"
                 />
+              </div>
+              <div class="main-content__championship__body__name">
+                <p>54 mins left</p>
+              </div>
+              </div>
+                <div class="main-content__championship__body__num">1.5x</div>
+                <div class="main-content__championship__body__num">$600</div>
+                <div class="main-content__championship__body__num">$400</div>
+                <div class="main-content__championship__body__num">$500</div>
+              </div>
               </div>
             </div>
             <div class="main-content__championship__body grid container">
@@ -546,52 +496,35 @@
               <div
                 class="main-content__championship__body__text flex-between-center"
               >
-                <div class="main-content__championship__body__data-item">
-                  <div class="main-content__championship__body__time">
-                    45:00
-                  </div>
-                  <div class="main-content__championship__body__data">
-                    42 <i class="fa-solid fa-chevron-right"></i>
-                  </div>
+              <div>
+                <div class="main-content__championship__body__team">
+                  <p>Celeya FC II</p>
                 </div>
-                <div class="main-content__championship__body__name">
-                  <p>Celaya FC II</p>
-                  <p>Inter de Querétaro II</p>
-                </div>
-                <div class="main-content__fav">
-                  <img
-                    src="assets/content-icons/data-statistics.png"
-                    alt="Statistics icon"
-                    loading="lazy"
-                  />
-                  <img
-                    src="assets/content-icons/data-statistics-active.png"
-                    alt="Active statistics icon"
-                    loading="lazy"
-                    class="main-content__fav__active"
-                  />
-                </div>
-                <div class="main-content__championship__body__insights">
-                  <span>2</span>
-                  <br />
-                  <span>0</span>
+                <div class="main-content__championship__body__bet">
+                  <p>Moneyline</p>
                 </div>
               </div>
-              <div class="main-content__championship__body__num">1.045</div>
-              <div class="main-content__championship__body__num">11.00</div>
-              <div class="main-content__championship__body__num">26.00</div>
-              <div class="main-content__fav fav-symbol">
+              <div class="main-content__fav">
                 <img
-                  src="assets/content-icons/soccer-feild-icon.png"
-                  alt="Play icon"
+                  src="assets/content-icons/data-statistics.png"
+                  alt="Statistics icon"
                   loading="lazy"
                 />
                 <img
-                  src="assets/content-icons/soccer-feild-icon-active.png"
-                  alt="Active play icon"
+                  src="assets/content-icons/data-statistics-active.png"
+                  alt="Active statistics icon"
                   loading="lazy"
                   class="main-content__fav__active"
                 />
+              </div>
+              <div class="main-content__championship__body__name">
+                <p>57 mins left</p>
+              </div>
+              </div>
+                <div class="main-content__championship__body__num">2.0x</div>
+                <div class="main-content__championship__body__num">$500</div>
+                <div class="main-content__championship__body__num">$250</div>
+                <div class="main-content__championship__body__num">$200</div>
               </div>
             </div>
             <div class="main-content__championship__body grid container">
@@ -611,52 +544,35 @@
               <div
                 class="main-content__championship__body__text flex-between-center"
               >
-                <div class="main-content__championship__body__data-item">
-                  <div class="main-content__championship__body__time">
-                    90:00
-                  </div>
-                  <div class="main-content__championship__body__data">
-                    13 <i class="fa-solid fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="main-content__championship__body__name">
+              <div>
+                <div class="main-content__championship__body__team">
                   <p>Chetumal</p>
-                  <p>Inter Playa del Carmen II</p>
                 </div>
-                <div class="main-content__fav">
-                  <img
-                    src="assets/content-icons/data-statistics.png"
-                    alt="Statistics icon"
-                    loading="lazy"
-                  />
-                  <img
-                    src="assets/content-icons/data-statistics-active.png"
-                    alt="Active statistics icon"
-                    loading="lazy"
-                    class="main-content__fav__active"
-                  />
-                </div>
-                <div class="main-content__championship__body__insights">
-                  <span>2</span>
-                  <br />
-                  <span>2</span>
+                <div class="main-content__championship__body__bet">
+                  <p>Moneyline</p>
                 </div>
               </div>
-              <div class="main-content__championship__body__num">1.22</div>
-              <div class="main-content__championship__body__num">3.25</div>
-              <div class="main-content__championship__body__num">4.00</div>
-              <div class="main-content__fav fav-symbol">
+              <div class="main-content__fav">
                 <img
-                  src="assets/content-icons/soccer-feild-icon.png"
-                  alt="Play icon"
+                  src="assets/content-icons/data-statistics.png"
+                  alt="Statistics icon"
                   loading="lazy"
                 />
                 <img
-                  src="assets/content-icons/soccer-feild-icon-active.png"
-                  alt="Active play icon"
+                  src="assets/content-icons/data-statistics-active.png"
+                  alt="Active statistics icon"
                   loading="lazy"
                   class="main-content__fav__active"
                 />
+              </div>
+              <div class="main-content__championship__body__name">
+                <p>1 hr left</p>
+              </div>
+              </div>
+                <div class="main-content__championship__body__num">1.5x</div>
+                <div class="main-content__championship__body__num">$300</div>
+                <div class="main-content__championship__body__num">$200</div>
+                <div class="main-content__championship__body__num">$200</div>
               </div>
             </div>
             <div class="main-content__championship__body grid container">
@@ -676,52 +592,35 @@
               <div
                 class="main-content__championship__body__text flex-between-center"
               >
-                <div class="main-content__championship__body__data-item">
-                  <div class="main-content__championship__body__time">
-                    45:00
-                  </div>
-                  <div class="main-content__championship__body__data">
-                    43 <i class="fa-solid fa-chevron-right"></i>
-                  </div>
+              <div>
+                <div class="main-content__championship__body__team">
+                  <p>Club Deportivo</p>
                 </div>
-                <div class="main-content__championship__body__name">
-                  <p>Club Deportivo CDH</p>
-                  <p>CS Atletico Tulancingo</p>
-                </div>
-                <div class="main-content__fav">
-                  <img
-                    src="assets/content-icons/data-statistics.png"
-                    alt="Statistics icon"
-                    loading="lazy"
-                  />
-                  <img
-                    src="assets/content-icons/data-statistics-active.png"
-                    alt="Active statistics icon"
-                    loading="lazy"
-                    class="main-content__fav__active"
-                  />
-                </div>
-                <div class="main-content__championship__body__insights">
-                  <span>0</span>
-                  <br />
-                  <span>1</span>
+                <div class="main-content__championship__body__bet">
+                  <p>Moneyline</p>
                 </div>
               </div>
-              <div class="main-content__championship__body__num">8.50</div>
-              <div class="main-content__championship__body__num">4.00</div>
-              <div class="main-content__championship__body__num">1.00</div>
-              <div class="main-content__fav fav-symbol">
+              <div class="main-content__fav">
                 <img
-                  src="assets/content-icons/soccer-feild-icon.png"
-                  alt="Play icon"
+                  src="assets/content-icons/data-statistics.png"
+                  alt="Statistics icon"
                   loading="lazy"
                 />
                 <img
-                  src="assets/content-icons/soccer-feild-icon-active.png"
-                  alt="Active play icon"
+                  src="assets/content-icons/data-statistics-active.png"
+                  alt="Active statistics icon"
                   loading="lazy"
                   class="main-content__fav__active"
                 />
+              </div>
+              <div class="main-content__championship__body__name">
+                <p>1 hr left</p>
+              </div>
+              </div>
+                <div class="main-content__championship__body__num">1.5x</div>
+                <div class="main-content__championship__body__num">$300</div>
+                <div class="main-content__championship__body__num">$200</div>
+                <div class="main-content__championship__body__num">$200</div>
               </div>
             </div>
           </article>
@@ -743,10 +642,10 @@
               <p class="main-content__championship__head__text">
                 Colombia - Primera B
               </p>
-              <div class="main-content__championship__head__num1">1</div>
-              <div class="main-content__championship__head__num2">X</div>
-              <div class="main-content__championship__head__num3">2</div>
-              <div class="main-content__championship__head__symbol"></div>
+              <div class="main-content__championship__head__num1">EV</div>
+              <div class="main-content__championship__head__num2">Ticket Payout</div>
+              <div class="main-content__championship__head__num3">Current Payout</div>
+              <div class="main-content__championship__head__num3">Price</div>
             </div>
             <div class="main-content__championship__body grid container">
               <div class="main-content__fav">
@@ -765,52 +664,35 @@
               <div
                 class="main-content__championship__body__text flex-between-center"
               >
-                <div class="main-content__championship__body__data-item">
-                  <div class="main-content__championship__body__time">
-                    34:15
-                  </div>
-                  <div class="main-content__championship__body__data">
-                    95 <i class="fa-solid fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="main-content__championship__body__name">
+              <div>
+                <div class="main-content__championship__body__team">
                   <p>Tigres FC</p>
-                  <p>Cortulua</p>
                 </div>
-                <div class="main-content__fav">
-                  <img
-                    src="assets/content-icons/data-statistics.png"
-                    alt="Statistics icon"
-                    loading="lazy"
-                  />
-                  <img
-                    src="assets/content-icons/data-statistics-active.png"
-                    alt="Active statistics icon"
-                    loading="lazy"
-                    class="main-content__fav__active"
-                  />
-                </div>
-                <div class="main-content__championship__body__insights">
-                  <span>2</span>
-                  <br />
-                  <span>0</span>
+                <div class="main-content__championship__body__bet">
+                  <p>Moneyline</p>
                 </div>
               </div>
-              <div class="main-content__championship__body__num">1.045</div>
-              <div class="main-content__championship__body__num">11.00</div>
-              <div class="main-content__championship__body__num">23.00</div>
-              <div class="main-content__fav fav-symbol">
+              <div class="main-content__fav">
                 <img
-                  src="assets/content-icons/video-icon.png"
-                  alt="Play icon"
+                  src="assets/content-icons/data-statistics.png"
+                  alt="Statistics icon"
                   loading="lazy"
                 />
                 <img
-                  src="assets/content-icons/video-icon-active.png"
-                  alt="Active play icon"
+                  src="assets/content-icons/data-statistics-active.png"
+                  alt="Active statistics icon"
                   loading="lazy"
                   class="main-content__fav__active"
                 />
+              </div>
+              <div class="main-content__championship__body__name">
+                <p>1 hr left</p>
+              </div>
+              </div>
+                <div class="main-content__championship__body__num">1.5x</div>
+                <div class="main-content__championship__body__num">$300</div>
+                <div class="main-content__championship__body__num">$200</div>
+                <div class="main-content__championship__body__num">$200</div>
               </div>
             </div>
           </article>
@@ -832,10 +714,10 @@
               <p class="main-content__championship__head__text">
                 Brazilië - State Championship
               </p>
-              <div class="main-content__championship__head__num1">1</div>
-              <div class="main-content__championship__head__num2">X</div>
-              <div class="main-content__championship__head__num3">2</div>
-              <div class="main-content__championship__head__symbol"></div>
+              <div class="main-content__championship__head__num1">EV</div>
+              <div class="main-content__championship__head__num2">Ticket Payout</div>
+              <div class="main-content__championship__head__num3">Current Payout</div>
+              <div class="main-content__championship__head__num3">Price</div>
             </div>
             <div class="main-content__championship__body grid container">
               <div class="main-content__fav">
@@ -854,52 +736,35 @@
               <div
                 class="main-content__championship__body__text flex-between-center"
               >
-                <div class="main-content__championship__body__data-item">
-                  <div class="main-content__championship__body__time">
-                    45:00
-                  </div>
-                  <div class="main-content__championship__body__data">
-                    12 <i class="fa-solid fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="main-content__championship__body__name">
-                  <p>Desportiva Ferroviaria</p>
+              <div>
+                <div class="main-content__championship__body__team">
                   <p>Serra</p>
                 </div>
-                <div class="main-content__fav">
-                  <img
-                    src="assets/content-icons/data-statistics.png"
-                    alt="Statistics icon"
-                    loading="lazy"
-                  />
-                  <img
-                    src="assets/content-icons/data-statistics-active.png"
-                    alt="Active statistics icon"
-                    loading="lazy"
-                    class="main-content__fav__active"
-                  />
-                </div>
-                <div class="main-content__championship__body__insights">
-                  <span>0</span>
-                  <br />
-                  <span>2</span>
+                <div class="main-content__championship__body__bet">
+                  <p>Moneyline</p>
                 </div>
               </div>
-              <div class="main-content__championship__body__num">13.00</div>
-              <div class="main-content__championship__body__num">8.00</div>
-              <div class="main-content__championship__body__num">1.11</div>
-              <div class="main-content__fav fav-symbol">
+              <div class="main-content__fav">
                 <img
-                  src="assets/content-icons/soccer-feild-icon.png"
-                  alt="Play icon"
+                  src="assets/content-icons/data-statistics.png"
+                  alt="Statistics icon"
                   loading="lazy"
                 />
                 <img
-                  src="assets/content-icons/soccer-feild-icon-active.png"
-                  alt="Active play icon"
+                  src="assets/content-icons/data-statistics-active.png"
+                  alt="Active statistics icon"
                   loading="lazy"
                   class="main-content__fav__active"
                 />
+              </div>
+              <div class="main-content__championship__body__name">
+                <p>1 hr left</p>
+              </div>
+              </div>
+                <div class="main-content__championship__body__num">1.5x</div>
+                <div class="main-content__championship__body__num">$300</div>
+                <div class="main-content__championship__body__num">$200</div>
+                <div class="main-content__championship__body__num">$200</div>
               </div>
             </div>
             <div class="main-content__championship__body grid container">
@@ -919,52 +784,35 @@
               <div
                 class="main-content__championship__body__text flex-between-center"
               >
-                <div class="main-content__championship__body__data-item">
-                  <div class="main-content__championship__body__time">
-                    49:47
-                  </div>
-                  <div class="main-content__championship__body__data">
-                    63 <i class="fa-solid fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="main-content__championship__body__name">
-                  <p>Brasil de Pelotas</p>
+              <div>
+                <div class="main-content__championship__body__team">
                   <p>Avenida</p>
                 </div>
-                <div class="main-content__fav">
-                  <img
-                    src="assets/content-icons/data-statistics.png"
-                    alt="Statistics icon"
-                    loading="lazy"
-                  />
-                  <img
-                    src="assets/content-icons/data-statistics-active.png"
-                    alt="Active statistics icon"
-                    loading="lazy"
-                    class="main-content__fav__active"
-                  />
-                </div>
-                <div class="main-content__championship__body__insights">
-                  <span>1</span>
-                  <br />
-                  <span>1</span>
+                <div class="main-content__championship__body__bet">
+                  <p>Moneyline</p>
                 </div>
               </div>
-              <div class="main-content__championship__body__num">2.25</div>
-              <div class="main-content__championship__body__num">2.25</div>
-              <div class="main-content__championship__body__num">5.50</div>
-              <div class="main-content__fav fav-symbol">
+              <div class="main-content__fav">
                 <img
-                  src="assets/content-icons/video-icon.png"
-                  alt="Play icon"
+                  src="assets/content-icons/data-statistics.png"
+                  alt="Statistics icon"
                   loading="lazy"
                 />
                 <img
-                  src="assets/content-icons/video-icon-active.png"
-                  alt="Active play icon"
+                  src="assets/content-icons/data-statistics-active.png"
+                  alt="Active statistics icon"
                   loading="lazy"
                   class="main-content__fav__active"
                 />
+              </div>
+              <div class="main-content__championship__body__name">
+                <p>1 hr left</p>
+              </div>
+              </div>
+                <div class="main-content__championship__body__num">2.0x</div>
+                <div class="main-content__championship__body__num">$500</div>
+                <div class="main-content__championship__body__num">$250</div>
+                <div class="main-content__championship__body__num">$200</div>
               </div>
             </div>
             <div class="main-content__championship__body grid container">
@@ -984,52 +832,35 @@
               <div
                 class="main-content__championship__body__text flex-between-center"
               >
-                <div class="main-content__championship__body__data-item">
-                  <div class="main-content__championship__body__time">
-                    57:31
-                  </div>
-                  <div class="main-content__championship__body__data">
-                    60 <i class="fa-solid fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="main-content__championship__body__name">
+              <div>
+                <div class="main-content__championship__body__team">
                   <p>Gremio</p>
-                  <p>Novo Hamburgo</p>
                 </div>
-                <div class="main-content__fav">
-                  <img
-                    src="assets/content-icons/data-statistics.png"
-                    alt="Statistics icon"
-                    loading="lazy"
-                  />
-                  <img
-                    src="assets/content-icons/data-statistics-active.png"
-                    alt="Active statistics icon"
-                    loading="lazy"
-                    class="main-content__fav__active"
-                  />
-                </div>
-                <div class="main-content__championship__body__insights">
-                  <span>5</span>
-                  <br />
-                  <span>0</span>
+                <div class="main-content__championship__body__bet">
+                  <p>Moneyline</p>
                 </div>
               </div>
-              <div class="main-content__championship__body__num">1.28</div>
-              <div class="main-content__championship__body__num">6.00</div>
-              <div class="main-content__championship__body__num">7.00</div>
-              <div class="main-content__fav fav-symbol">
+              <div class="main-content__fav">
                 <img
-                  src="assets/content-icons/video-icon.png"
-                  alt="Play icon"
+                  src="assets/content-icons/data-statistics.png"
+                  alt="Statistics icon"
                   loading="lazy"
                 />
                 <img
-                  src="assets/content-icons/video-icon-active.png"
-                  alt="Active play icon"
+                  src="assets/content-icons/data-statistics-active.png"
+                  alt="Active statistics icon"
                   loading="lazy"
                   class="main-content__fav__active"
                 />
+              </div>
+              <div class="main-content__championship__body__name">
+                <p>1 hr left</p>
+              </div>
+              </div>
+                <div class="main-content__championship__body__num">1.5x</div>
+                <div class="main-content__championship__body__num">$300</div>
+                <div class="main-content__championship__body__num">$200</div>
+                <div class="main-content__championship__body__num">$200</div>
               </div>
             </div>
           </article>
@@ -1051,10 +882,10 @@
               <p class="main-content__championship__head__text">
                 Venezuela - Primera Division
               </p>
-              <div class="main-content__championship__head__num1">1</div>
-              <div class="main-content__championship__head__num2">X</div>
-              <div class="main-content__championship__head__num3">2</div>
-              <div class="main-content__championship__head__symbol"></div>
+              <div class="main-content__championship__head__num1">EV</div>
+              <div class="main-content__championship__head__num2">Ticket Payout</div>
+              <div class="main-content__championship__head__num3">Current Payout</div>
+              <div class="main-content__championship__head__num3">Price</div>
             </div>
             <div class="main-content__championship__body grid container">
               <div class="main-content__fav">
@@ -1073,52 +904,35 @@
               <div
                 class="main-content__championship__body__text flex-between-center"
               >
-                <div class="main-content__championship__body__data-item">
-                  <div class="main-content__championship__body__time">
-                    45:00
-                  </div>
-                  <div class="main-content__championship__body__data">
-                    23 <i class="fa-solid fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="main-content__championship__body__name">
+              <div>
+                <div class="main-content__championship__body__team">
                   <p>Monagas</p>
-                  <p>Angostura FC</p>
                 </div>
-                <div class="main-content__fav">
-                  <img
-                    src="assets/content-icons/data-statistics.png"
-                    alt="Statistics icon"
-                    loading="lazy"
-                  />
-                  <img
-                    src="assets/content-icons/data-statistics-active.png"
-                    alt="Active statistics icon"
-                    loading="lazy"
-                    class="main-content__fav__active"
-                  />
-                </div>
-                <div class="main-content__championship__body__insights">
-                  <span>0</span>
-                  <br />
-                  <span>0</span>
+                <div class="main-content__championship__body__bet">
+                  <p>Moneyline</p>
                 </div>
               </div>
-              <div class="main-content__championship__body__num">2.20</div>
-              <div class="main-content__championship__body__num">2.37</div>
-              <div class="main-content__championship__body__num">4.75</div>
-              <div class="main-content__fav fav-symbol">
+              <div class="main-content__fav">
                 <img
-                  src="assets/content-icons/video-icon.png"
-                  alt="Play icon"
+                  src="assets/content-icons/data-statistics.png"
+                  alt="Statistics icon"
                   loading="lazy"
                 />
                 <img
-                  src="assets/content-icons/video-icon-active.png"
-                  alt="Active play icon"
+                  src="assets/content-icons/data-statistics-active.png"
+                  alt="Active statistics icon"
                   loading="lazy"
                   class="main-content__fav__active"
                 />
+              </div>
+              <div class="main-content__championship__body__name">
+                <p>1 hr left</p>
+              </div>
+              </div>
+                <div class="main-content__championship__body__num">2.0x</div>
+                <div class="main-content__championship__body__num">$500</div>
+                <div class="main-content__championship__body__num">$250</div>
+                <div class="main-content__championship__body__num">$200</div>
               </div>
             </div>
           </article>
@@ -1140,10 +954,10 @@
               <p class="main-content__championship__head__text">
                 Australia Friendlies
               </p>
-              <div class="main-content__championship__head__num1">1</div>
-              <div class="main-content__championship__head__num2">X</div>
-              <div class="main-content__championship__head__num3">2</div>
-              <div class="main-content__championship__head__symbol"></div>
+              <div class="main-content__championship__head__num1">EV</div>
+              <div class="main-content__championship__head__num2">Ticket Payout</div>
+              <div class="main-content__championship__head__num3">Current Payout</div>
+              <div class="main-content__championship__head__num3">Price</div>
             </div>
             <div class="main-content__championship__body grid container">
               <div class="main-content__fav">
@@ -1162,52 +976,35 @@
               <div
                 class="main-content__championship__body__text flex-between-center"
               >
-                <div class="main-content__championship__body__data-item">
-                  <div class="main-content__championship__body__time">
-                    08:01
-                  </div>
-                  <div class="main-content__championship__body__data">
-                    18 <i class="fa-solid fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="main-content__championship__body__name">
+              <div>
+                <div class="main-content__championship__body__team">
                   <p>Clarence Zebras FC</p>
-                  <p>Kingborough Lions</p>
                 </div>
-                <div class="main-content__fav">
-                  <img
-                    src="assets/content-icons/data-statistics.png"
-                    alt="Statistics icon"
-                    loading="lazy"
-                  />
-                  <img
-                    src="assets/content-icons/data-statistics-active.png"
-                    alt="Active statistics icon"
-                    loading="lazy"
-                    class="main-content__fav__active"
-                  />
-                </div>
-                <div class="main-content__championship__body__insights">
-                  <span>0</span>
-                  <br />
-                  <span>0</span>
+                <div class="main-content__championship__body__bet">
+                  <p>Moneyline</p>
                 </div>
               </div>
-              <div class="main-content__championship__body__num">4.75</div>
-              <div class="main-content__championship__body__num">4.50</div>
-              <div class="main-content__championship__body__num">1.53</div>
-              <div class="main-content__fav fav-symbol">
+              <div class="main-content__fav">
                 <img
-                  src="assets/content-icons/soccer-feild-icon.png"
-                  alt="Play icon"
+                  src="assets/content-icons/data-statistics.png"
+                  alt="Statistics icon"
                   loading="lazy"
                 />
                 <img
-                  src="assets/content-icons/soccer-feild-icon-active.png"
-                  alt="Active play icon"
+                  src="assets/content-icons/data-statistics-active.png"
+                  alt="Active statistics icon"
                   loading="lazy"
                   class="main-content__fav__active"
                 />
+              </div>
+              <div class="main-content__championship__body__name">
+                <p>1 hr left</p>
+              </div>
+              </div>
+                <div class="main-content__championship__body__num">2.0x</div>
+                <div class="main-content__championship__body__num">$500</div>
+                <div class="main-content__championship__body__num">$250</div>
+                <div class="main-content__championship__body__num">$200</div>
               </div>
             </div>
           </article>
@@ -1229,10 +1026,10 @@
               <p class="main-content__championship__head__text">
                 Chili - Segunda
               </p>
-              <div class="main-content__championship__head__num1">1</div>
-              <div class="main-content__championship__head__num2">X</div>
-              <div class="main-content__championship__head__num3">2</div>
-              <div class="main-content__championship__head__symbol"></div>
+              <div class="main-content__championship__head__num1">EV</div>
+              <div class="main-content__championship__head__num2">Ticket Payout</div>
+              <div class="main-content__championship__head__num3">Current Payout</div>
+              <div class="main-content__championship__head__num3">Price</div>
             </div>
             <div class="main-content__championship__body grid container">
               <div class="main-content__fav">
@@ -1251,52 +1048,35 @@
               <div
                 class="main-content__championship__body__text flex-between-center"
               >
-                <div class="main-content__championship__body__data-item">
-                  <div class="main-content__championship__body__time">
-                    78:03
-                  </div>
-                  <div class="main-content__championship__body__data">
-                    32 <i class="fa-solid fa-chevron-right"></i>
-                  </div>
-                </div>
-                <div class="main-content__championship__body__name">
-                  <p>Lautaro de Buin</p>
+              <div>
+                <div class="main-content__championship__body__team">
                   <p>Deportes Rengo</p>
                 </div>
-                <div class="main-content__fav">
-                  <img
-                    src="assets/content-icons/data-statistics.png"
-                    alt="Statistics icon"
-                    loading="lazy"
-                  />
-                  <img
-                    src="assets/content-icons/data-statistics-active.png"
-                    alt="Active statistics icon"
-                    loading="lazy"
-                    class="main-content__fav__active"
-                  />
-                </div>
-                <div class="main-content__championship__body__insights">
-                  <span>3</span>
-                  <br />
-                  <span>0</span>
+                <div class="main-content__championship__body__bet">
+                  <p>Moneyline</p>
                 </div>
               </div>
-              <div class="main-content__championship__body__num">1.005</div>
-              <div class="main-content__championship__body__num">34.00</div>
-              <div class="main-content__championship__body__num">51.00</div>
-              <div class="main-content__fav fav-symbol">
+              <div class="main-content__fav">
                 <img
-                  src="assets/content-icons/soccer-feild-icon.png"
-                  alt="Play icon"
+                  src="assets/content-icons/data-statistics.png"
+                  alt="Statistics icon"
                   loading="lazy"
                 />
                 <img
-                  src="assets/content-icons/soccer-feild-icon-active.png"
-                  alt="Active play icon"
+                  src="assets/content-icons/data-statistics-active.png"
+                  alt="Active statistics icon"
                   loading="lazy"
                   class="main-content__fav__active"
                 />
+              </div>
+              <div class="main-content__championship__body__name">
+                <p>1 hr left</p>
+              </div>
+              </div>
+                <div class="main-content__championship__body__num">2.0x</div>
+                <div class="main-content__championship__body__num">$500</div>
+                <div class="main-content__championship__body__num">$250</div>
+                <div class="main-content__championship__body__num">$200</div>
               </div>
             </div>
           </article>
@@ -1318,10 +1098,10 @@
               <p class="main-content__championship__head__text">
                 Bolivia - Apertura
               </p>
-              <div class="main-content__championship__head__num1">1</div>
-              <div class="main-content__championship__head__num2">X</div>
-              <div class="main-content__championship__head__num3">2</div>
-              <div class="main-content__championship__head__symbol"></div>
+              <div class="main-content__championship__head__num1">EV</div>
+              <div class="main-content__championship__head__num2">Ticket Payout</div>
+              <div class="main-content__championship__head__num3">Current Payout</div>
+              <div class="main-content__championship__head__num3">Price</div>
             </div>
             <div class="main-content__championship__body grid container">
               <div class="main-content__fav">
@@ -1340,52 +1120,35 @@
               <div
                 class="main-content__championship__body__text flex-between-center"
               >
-                <div class="main-content__championship__body__data-item">
-                  <div class="main-content__championship__body__time">
-                    43:35
-                  </div>
-                  <div class="main-content__championship__body__data">
-                    93 <i class="fa-solid fa-chevron-right"></i>
-                  </div>
+              <div>
+                <div class="main-content__championship__body__team">
+                  <p>Nueva Chicago</p>
                 </div>
-                <div class="main-content__championship__body__name">
-                  <p>Real Tomayapo</p>
-                  <p>Royal Pari FC</p>
-                </div>
-                <div class="main-content__fav">
-                  <img
-                    src="assets/content-icons/data-statistics.png"
-                    alt="Statistics icon"
-                    loading="lazy"
-                  />
-                  <img
-                    src="assets/content-icons/data-statistics-active.png"
-                    alt="Active statistics icon"
-                    loading="lazy"
-                    class="main-content__fav__active"
-                  />
-                </div>
-                <div class="main-content__championship__body__insights">
-                  <span>0</span>
-                  <br />
-                  <span>2</span>
+                <div class="main-content__championship__body__bet">
+                  <p>Moneyline</p>
                 </div>
               </div>
-              <div class="main-content__championship__body__num">13.00</div>
-              <div class="main-content__championship__body__num">6.50</div>
-              <div class="main-content__championship__body__num">1.20</div>
-              <div class="main-content__fav fav-symbol">
+              <div class="main-content__fav">
                 <img
-                  src="assets/content-icons/video-icon.png"
-                  alt="Play icon"
+                  src="assets/content-icons/data-statistics.png"
+                  alt="Statistics icon"
                   loading="lazy"
                 />
                 <img
-                  src="assets/content-icons/video-icon-active.png"
-                  alt="Active play icon"
+                  src="assets/content-icons/data-statistics-active.png"
+                  alt="Active statistics icon"
                   loading="lazy"
                   class="main-content__fav__active"
                 />
+              </div>
+              <div class="main-content__championship__body__name">
+                <p>1 hr left</p>
+              </div>
+              </div>
+                <div class="main-content__championship__body__num">2.0x</div>
+                <div class="main-content__championship__body__num">$500</div>
+                <div class="main-content__championship__body__num">$250</div>
+                <div class="main-content__championship__body__num">$200</div>
               </div>
             </div>
           </article>
@@ -1407,10 +1170,10 @@
               <p class="main-content__championship__head__text">
                 Paraguay - Division Profesional
               </p>
-              <div class="main-content__championship__head__num1">1</div>
-              <div class="main-content__championship__head__num2">X</div>
-              <div class="main-content__championship__head__num3">2</div>
-              <div class="main-content__championship__head__symbol"></div>
+              <div class="main-content__championship__head__num1">EV</div>
+              <div class="main-content__championship__head__num2">Ticket Payout</div>
+              <div class="main-content__championship__head__num3">Current Payout</div>
+              <div class="main-content__championship__head__num3">Price</div>
             </div>
             <div class="main-content__championship__body grid container">
               <div class="main-content__fav">
@@ -1460,21 +1223,10 @@
                   <span>0</span>
                 </div>
               </div>
-              <div class="main-content__championship__body__num">1.12</div>
-              <div class="main-content__championship__body__num">7.00</div>
-              <div class="main-content__championship__body__num">29.00</div>
-              <div class="main-content__fav fav-symbol">
-                <img
-                  src="assets/content-icons/soccer-feild-icon.png"
-                  alt="Play icon"
-                  loading="lazy"
-                />
-                <img
-                  src="assets/content-icons/soccer-feild-icon-active.png"
-                  alt="Active play icon"
-                  loading="lazy"
-                  class="main-content__fav__active"
-                />
+                <div class="main-content__championship__body__num">2.0x</div>
+                <div class="main-content__championship__body__num">$500</div>
+                <div class="main-content__championship__body__num">$250</div>
+                <div class="main-content__championship__body__num">$200</div>
               </div>
             </div>
           </article>
@@ -1795,6 +1547,21 @@
       </section>
       <!-- side bar structure -->
       <aside class="side-bar">
+        <section class="side-bar__ticket-details container">
+          <h2>Ticket Details</h2>
+          <ul>
+              <li><strong>Team Name:</strong> <span id="team-name">Team Name Here</span></li>
+              <li><strong>Bet Type:</strong> <span id="bet-type">Bet Type Here</span></li>
+              <li><strong>Time to Expiry:</strong> <span id="time-to-expiry">Time Here</span></li>
+              <li><strong>EV:</strong> <span id="ev">EV Here</span></li>
+              <li><strong>Ticket Payout:</strong> <span id="ticket-payout">Payout Here</span></li>
+              <li><strong>Current Payout:</strong> <span id="current-payout">Current Payout Here</span></li>
+              <li><strong>Price:</strong> <span id="price">Price Here</span></li>
+          </ul>
+          <div id="payout-chart">
+            <canvas id="myChart"></canvas>            
+          </div>
+      </section>
         <section class="side-bar__drow container">
           <div class="side-bar__result flex-center">
             <h2>Bournemouth</h2>
@@ -2113,5 +1880,36 @@
         </section>
       </aside>
     </main>
+
+    <script>
+      var ctx = document.getElementById('myChart').getContext('2d');
+      var myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: ['2022-01-01', '2022-01-02', '2022-01-03', '2022-01-04', '2022-01-05'], // replace with your dates
+              datasets: [{
+                  label: 'Ticket Payout ($)',
+                  data: [12, 19, 3, 5, 2, 3], // replace with your data
+                  fill: false,
+                  borderColor: 'rgb(75, 192, 192)',
+                  tension: 0.1
+              }]
+          },
+          options: {
+              scales: {
+                  x: {
+                      type: 'time',
+                      time: {
+                          unit: 'day'
+                      }
+                  },
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+  </script>
+  
   </body>
 </html>
