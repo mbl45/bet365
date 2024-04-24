@@ -6,7 +6,7 @@
   --fourthBackground: #585858;
   --fifthBackground: #383838;
   --sixthBackground: #444;
-  --greenBackground: #126e51;
+  --greenBackground: #2b76a1;
   --mainTextColor: #9c9c9c;
   --secondryTextColor: #ddd;
   --thirdTextColor: #a7a7a7;
@@ -15,7 +15,7 @@
   --numColor: #ccc;
   --tableHeadColor: #cecece;
   --hoverColor: #fff;
-  --secondHoverColor: #26ffbe;
+  --secondHoverColor: #26baff;
   --thirdHoverColor: #636363;
   --mainBorderColor: #5d5d5d;
   --secondryBorderColor: #545454;
@@ -295,7 +295,7 @@ ul {
 .main-content__nav {
   width: 100%;
   background-color: var(--secondBackground);
-  border-bottom: 2px solid #137a5a;
+  border-bottom: 2px solid #2b76a1;
 }
 .main-content__icons {
   width: 100%;
@@ -358,7 +358,7 @@ ul {
   height: 0.2rem;
   left: 0;
   bottom: -1.5rem;
-  background-color: #1db787;
+  background-color: #26baff;
 }
 .main-content__icons li:hover p {
   color: var(--hoverColor);
@@ -610,15 +610,15 @@ ul {
   padding-right: 0;
 }
 .games__wrapper {
-  border-top: 1px solid #367a65;
-  border-bottom: 1px solid #367a65;
+  border-top: 1px solid #2b76a1;
+  border-bottom: 1px solid #2b76a1;
   background-color: var(--sixthBackground);
   padding-block: 1.5rem;
 }
 .games__wrapper h2 {
   padding: 2rem 0;
   font-size: 1.4rem;
-  color: #58d7af;
+  color: #26baff;
 }
 .games__posters {
   display: flex;
@@ -924,7 +924,7 @@ ul {
   z-index: 1;
   background-color: rgba(22, 80, 49, 0.7);
   border-radius: 0.4rem;
-  color: #12e096;
+  color: #26baff;
   padding: 0.5rem 1rem;
   font-size: 1.4rem;
   -o-transform: translateX(-50%);
@@ -983,7 +983,7 @@ ul {
   position: absolute;
   left: 0;
   bottom: -2.5rem;
-  background-color: #2ec193;
+  background-color: #26baff;
 }
 .side-bar__data__nums {
   gap: 2rem;
@@ -1185,7 +1185,7 @@ ul {
 .text__title > h2 {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #58d7af;
+  color: #26baff;
   letter-spacing: 0.1rem;
   -o-transition: var(--colorTransition);
   -moz-transition: var(--colorTransition);
